@@ -4,20 +4,20 @@ export class Room implements RoomInterface {
     roomNumber: string;
     type: string;
     price: number;
-    isBooked: boolean;
+    available: boolean;
 
     constructor(roomNumber: string, type: string, price: number) {
         this.roomNumber = roomNumber;
         this.type = type;
         this.price = price;
-        this.isBooked = false;
+        this.available = false;
     }
 
     bookRoom() {
-        this.isBooked = true;
+        this.available = true;
     }
 
     checkoutRoom() {
-        this.isBooked = false;
+        this.available = false;
     }
 }

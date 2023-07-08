@@ -1,6 +1,6 @@
-export interface Room {
+export interface RoomInterface {
     roomNumber: string;
     type: string;
-    available: boolean;
     price: number;
+    available: boolean;
 }

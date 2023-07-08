@@ -1,21 +1,35 @@
-import { Customer } from './customer.ts';
-import { Booking } from './booking.ts';
-import { Room } from './room.ts';
-import { displayUpcomingBookings, addBookingRecord, addCustomerInfo, viewAllBookings, updateCustomerInfo, updateBookingInfo, deleteBookingRecord, deleteCustomerInfo } from './utils.ts';
+import { Customer } from './customer.js';
+import { Booking } from './booking.js';
+import { Room } from './room.js';
+import {
+    // displayUpcomingBookings,
+    // addBookingRecord,
+    // addCustomerInfo,
+    // viewAllBookings,
+    // updateCustomerInfo,
+    // updateBookingInfo,
+    // deleteBookingRecord,
+    // deleteCustomerInfo
+} from './utils.js';
 
 // Initialize data
 let customerData: Customer[] = [];
 let bookingData: Booking[] = [];
 
 // DOM Elements
-const homePage = document.getElementById('homePage');
-const bookingRecordPage = document.getElementById('bookingRecordPage');
-const newBookingForm = document.getElementById('newBookingForm');
-const newCustomerForm = document.getElementById('newCustomerForm');
+const homePage: HTMLElement = document.getElementById('homePage')!;
+const bookingRecordPage: HTMLElement = document.getElementById('bookingRecordPage')!;
+const newBookingForm: HTMLElement = document.getElementById('newBookingForm')!;
+const newCustomerForm: HTMLElement = document.getElementById('newCustomerForm')!;
 
 // Event Listeners
 newBookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    // const newBooking: Booking = new Booking(
+    //     'booking_id',
+    //     'customer_id',
+
+    // );
     addBookingRecord();
 });
 

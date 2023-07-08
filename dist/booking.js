@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Booking = void 0;
 var Booking = /** @class */ (function () {
     function Booking(booking_id, customer_id, date, room_numbers, total_price, deposit_paid, paid_in_full, notes) {
         this.booking_id = booking_id;
@@ -27,4 +24,4 @@ var Booking = /** @class */ (function () {
     };
     return Booking;
 }());
-exports.Booking = Booking;
+export { Booking };

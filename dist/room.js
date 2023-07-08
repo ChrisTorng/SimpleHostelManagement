@@ -1,19 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Room = void 0;
 var Room = /** @class */ (function () {
     function Room(roomNumber, type, price) {
         this.roomNumber = roomNumber;
         this.type = type;
         this.price = price;
-        this.isBooked = false;
+        this.available = false;
     }
     Room.prototype.bookRoom = function () {
-        this.isBooked = true;
+        this.available = true;
     };
     Room.prototype.checkoutRoom = function () {
-        this.isBooked = false;
+        this.available = false;
     };
     return Room;
 }());
-exports.Room = Room;
+export { Room };
